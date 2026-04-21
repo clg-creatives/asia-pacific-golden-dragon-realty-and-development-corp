@@ -1,0 +1,1774 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Asia Pacific Golden Dragon Realty & Development Corporation</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --gold: #D4AF37;
+            --gold-light: #F4E8C1;
+            --gold-dark: #AA8C2C;
+            --charcoal: #1A1A1A;
+            --charcoal-light: #2D2D2D;
+            --gray: #6B6B6B;
+            --light-gray: #F5F5F5;
+            --white: #FFFFFF;
+            --transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+        }
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        html {
+            scroll-behavior: smooth;
+        }
+        body {
+            font-family: 'Inter', sans-serif;
+            color: var(--charcoal);
+            line-height: 1.6;
+            overflow-x: hidden;
+            background-color: var(--white);
+        }
+        h1, h2, h3, h4 {
+            font-family: 'Playfair Display', serif;
+            font-weight: 600;
+            line-height: 1.2;
+        }
+
+        /* Navigation */
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid rgba(212, 175, 55, 0.2);
+            z-index: 1000;
+            padding: 1rem 0;
+            transition: var(--transition);
+        }
+        nav.scrolled {
+            padding: 0.6rem 0;
+            box-shadow: 0 2px 20px rgba(0,0,0,0.08);
+        }
+        .nav-container {
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            text-decoration: none;
+        }
+        .logo-icon {
+            width: 45px;
+            height: 45px;
+            background: linear-gradient(135deg, var(--gold) 0%, var(--gold-dark) 100%);
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: 700;
+            font-size: 1.2rem;
+            box-shadow: 0 4px 12px rgba(212, 175, 55, 0.3);
+        }
+        .logo-text {
+            display: flex;
+            flex-direction: column;
+        }
+        .logo-text span:first-child {
+            font-family: 'Playfair Display', serif;
+            font-weight: 700;
+            font-size: 1.1rem;
+            color: var(--charcoal);
+            letter-spacing: -0.02em;
+            line-height: 1.1;
+        }
+        .logo-text span:last-child {
+            font-size: 0.65rem;
+            text-transform: uppercase;
+            letter-spacing: 0.15em;
+            color: var(--gold-dark);
+            font-weight: 600;
+        }
+        .nav-links {
+            display: flex;
+            gap: 2.5rem;
+            list-style: none;
+            align-items: center;
+        }
+        .nav-links a {
+            text-decoration: none;
+            color: var(--charcoal);
+            font-size: 0.9rem;
+            font-weight: 500;
+            position: relative;
+            transition: var(--transition);
+        }
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: -4px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--gold);
+            transition: var(--transition);
+        }
+        .nav-links a:hover {
+            color: var(--gold-dark);
+        }
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            cursor: pointer;
+            padding: 0.5rem;
+        }
+        .mobile-menu-btn span {
+            display: block;
+            width: 25px;
+            height: 2px;
+            background: var(--charcoal);
+            margin: 5px 0;
+            transition: var(--transition);
+        }
+
+        /* Hero Section */
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            position: relative;
+            background: linear-gradient(135deg, var(--charcoal) 0%, var(--charcoal-light) 50%, #1a1a2e 100%);
+            overflow: hidden;
+        }
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23D4AF37' fill-opacity='0.03'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+            opacity: 0.4;
+        }
+        .hero-accent {
+            position: absolute;
+            right: -10%;
+            top: -10%;
+            width: 600px;
+            height: 600px;
+            background: radial-gradient(circle, rgba(212, 175, 55, 0.15) 0%, transparent 70%);
+            border-radius: 50%;
+            animation: pulse 8s ease-in-out infinite;
+        }
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); opacity: 0.5; }
+            50% { transform: scale(1.1); opacity: 0.8; }
+        }
+        .hero-content {
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 8rem 2rem 4rem;
+            position: relative;
+            z-index: 2;
+            width: 100%;
+        }
+        .hero-label {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.75rem;
+            color: var(--gold);
+            font-size: 0.85rem;
+            font-weight: 600;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            margin-bottom: 1.5rem;
+            opacity: 0;
+            transform: translateY(20px);
+            animation: fadeUp 0.8s forwards 0.2s;
+        }
+        .hero-label::before {
+            content: '';
+            width: 40px;
+            height: 1px;
+            background: var(--gold);
+        }
+        .hero h1 {
+            font-size: clamp(2.5rem, 6vw, 4.5rem);
+            color: var(--white);
+            margin-bottom: 1.5rem;
+            max-width: 900px;
+            opacity: 0;
+            transform: translateY(30px);
+            animation: fadeUp 0.8s forwards 0.4s;
+        }
+        .hero h1 em {
+            color: var(--gold);
+            font-style: italic;
+        }
+        .hero p {
+            font-size: 1.25rem;
+            color: rgba(255, 255, 255, 0.75);
+            max-width: 600px;
+            margin-bottom: 2.5rem;
+            font-weight: 300;
+            opacity: 0;
+            transform: translateY(20px);
+            animation: fadeUp 0.8s forwards 0.6s;
+        }
+        .hero-buttons {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+            opacity: 0;
+            transform: translateY(20px);
+            animation: fadeUp 0.8s forwards 0.8s;
+        }
+        .btn {
+            padding: 1rem 2.5rem;
+            border-radius: 4px;
+            font-weight: 600;
+            font-size: 0.95rem;
+            text-decoration: none;
+            transition: var(--transition);
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            cursor: pointer;
+            border: none;
+        }
+        .btn-primary {
+            background: linear-gradient(135deg, var(--gold) 0%, var(--gold-dark) 100%);
+            color: var(--white);
+            box-shadow: 0 4px 20px rgba(212, 175, 55, 0.3);
+        }
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 30px rgba(212, 175, 55, 0.4);
+        }
+        .btn-outline {
+            background: transparent;
+            color: var(--white);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+        }
+        .btn-outline:hover {
+            background: rgba(255, 255, 255, 0.1);
+            border-color: var(--gold);
+        }
+        .hero-pillars {
+            position: absolute;
+            bottom: 3rem;
+            left: 0;
+            right: 0;
+            display: flex;
+            justify-content: center;
+            gap: 3rem;
+            padding: 0 2rem;
+            flex-wrap: wrap;
+            opacity: 0;
+            animation: fadeUp 0.8s forwards 1s;
+        }
+        .pillar {
+            text-align: center;
+            color: rgba(255, 255, 255, 0.6);
+            font-size: 0.8rem;
+            font-weight: 500;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            position: relative;
+        }
+        .pillar:not(:last-child)::after {
+            content: '•';
+            position: absolute;
+            right: -1.75rem;
+            color: var(--gold);
+            opacity: 0.5;
+        }
+        @keyframes fadeUp {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* General Section Styles */
+        section {
+            padding: 6rem 0;
+            position: relative;
+        }
+        .container {
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+        .section-header {
+            margin-bottom: 4rem;
+            max-width: 700px;
+        }
+        .section-label {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.75rem;
+            color: var(--gold-dark);
+            font-size: 0.8rem;
+            font-weight: 700;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            margin-bottom: 1rem;
+        }
+        .section-label::before {
+            content: '';
+            width: 30px;
+            height: 2px;
+            background: var(--gold);
+        }
+        .section-header h2 {
+            font-size: clamp(2rem, 4vw, 3rem);
+            color: var(--charcoal);
+            margin-bottom: 1rem;
+        }
+        .section-header p {
+            color: var(--gray);
+            font-size: 1.1rem;
+            line-height: 1.7;
+        }
+
+        /* About */
+        .about {
+            background: var(--light-gray);
+        }
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+        }
+        .about-image {
+            position: relative;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.1);
+        }
+        .about-image-placeholder {
+            background: linear-gradient(135deg, var(--charcoal-light) 0%, var(--charcoal) 100%);
+            aspect-ratio: 4/3;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--gold);
+            font-family: 'Playfair Display', serif;
+            font-size: 1.5rem;
+            position: relative;
+            text-align: center;
+            padding: 2rem;
+        }
+        .about-image-badge {
+            position: absolute;
+            bottom: 2rem;
+            right: -2rem;
+            background: var(--white);
+            padding: 1.5rem;
+            border-radius: 8px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+            border-left: 4px solid var(--gold);
+        }
+        .about-image-badge .number {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.5rem;
+            color: var(--gold-dark);
+            font-weight: 700;
+            line-height: 1;
+        }
+        .about-image-badge .label {
+            font-size: 0.85rem;
+            color: var(--gray);
+            margin-top: 0.25rem;
+        }
+        .about-content h3 {
+            font-size: 2rem;
+            margin-bottom: 1.5rem;
+            color: var(--charcoal);
+        }
+        .about-content p {
+            color: var(--gray);
+            margin-bottom: 1.5rem;
+            line-height: 1.8;
+        }
+        .about-stats {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+            margin-top: 3rem;
+            padding-top: 2rem;
+            border-top: 1px solid rgba(0,0,0,0.1);
+        }
+        .stat h4 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2rem;
+            color: var(--gold-dark);
+            margin-bottom: 0.25rem;
+        }
+        .stat span {
+            font-size: 0.85rem;
+            color: var(--gray);
+        }
+
+        /* Services */
+        .services {
+            background: var(--white);
+        }
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
+        }
+        .service-card {
+            background: var(--white);
+            border: 1px solid rgba(0,0,0,0.06);
+            border-radius: 12px;
+            padding: 2.5rem;
+            transition: var(--transition);
+            position: relative;
+            overflow: hidden;
+        }
+        .service-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background: linear-gradient(90deg, var(--gold) 0%, var(--gold-light) 100%);
+            transform: scaleX(0);
+            transform-origin: left;
+            transition: var(--transition);
+        }
+        .service-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 60px rgba(0,0,0,0.08);
+            border-color: transparent;
+        }
+        .service-card:hover::before {
+            transform: scaleX(1);
+        }
+        .service-icon {
+            width: 50px;
+            height: 50px;
+            background: var(--gold-light);
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 1.5rem;
+            font-size: 1.5rem;
+        }
+        .service-card h3 {
+            font-size: 1.3rem;
+            margin-bottom: 1rem;
+            color: var(--charcoal);
+        }
+        .service-card p {
+            color: var(--gray);
+            font-size: 0.95rem;
+            line-height: 1.7;
+            margin-bottom: 1.5rem;
+        }
+        .service-list {
+            list-style: none;
+        }
+        .service-list li {
+            padding: 0.4rem 0;
+            color: var(--gray);
+            font-size: 0.9rem;
+            display: flex;
+            align-items: flex-start;
+            gap: 0.5rem;
+        }
+        .service-list li::before {
+            content: '—';
+            color: var(--gold);
+            font-weight: 700;
+            flex-shrink: 0;
+        }
+
+        /* Development Pillars */
+        .pillars-section {
+            background: var(--charcoal);
+            color: var(--white);
+            position: relative;
+            overflow: hidden;
+        }
+        .pillars-section::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -20%;
+            width: 800px;
+            height: 800px;
+            background: radial-gradient(circle, rgba(212, 175, 55, 0.1) 0%, transparent 70%);
+            border-radius: 50%;
+        }
+        .pillars-section .section-label {
+            color: var(--gold);
+        }
+        .pillars-section .section-label::before {
+            background: var(--gold);
+        }
+        .pillars-section h2 {
+            color: var(--white);
+        }
+        .pillars-section .section-header p {
+            color: rgba(255, 255, 255, 0.6);
+        }
+        .pillars-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.5rem;
+            position: relative;
+            z-index: 2;
+        }
+        .pillar-card {
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            border-radius: 12px;
+            padding: 2rem;
+            transition: var(--transition);
+        }
+        .pillar-card:hover {
+            background: rgba(255, 255, 255, 0.06);
+            border-color: rgba(212, 175, 55, 0.3);
+            transform: translateY(-3px);
+        }
+        .pillar-card .number {
+            font-family: 'Playfair Display', serif;
+            font-size: 3rem;
+            color: var(--gold);
+            opacity: 0.3;
+            line-height: 1;
+            margin-bottom: 1rem;
+        }
+        .pillar-card h3 {
+            color: var(--white);
+            font-size: 1.2rem;
+            margin-bottom: 0.75rem;
+        }
+        .pillar-card p {
+            color: rgba(255, 255, 255, 0.5);
+            font-size: 0.9rem;
+            line-height: 1.6;
+        }
+
+        /* Projects */
+        .projects {
+            background: var(--light-gray);
+        }
+        .projects-filter {
+            display: flex;
+            gap: 1rem;
+            margin-bottom: 3rem;
+            flex-wrap: wrap;
+        }
+        .filter-btn {
+            padding: 0.6rem 1.5rem;
+            border: 1px solid rgba(0,0,0,0.1);
+            background: var(--white);
+            border-radius: 100px;
+            font-size: 0.9rem;
+            color: var(--gray);
+            cursor: pointer;
+            transition: var(--transition);
+            font-weight: 500;
+        }
+        .filter-btn:hover, .filter-btn.active {
+            background: var(--charcoal);
+            color: var(--white);
+            border-color: var(--charcoal);
+        }
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 2rem;
+        }
+        .project-card {
+            background: var(--white);
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+            transition: var(--transition);
+        }
+        .project-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 50px rgba(0,0,0,0.1);
+        }
+        .project-image {
+            height: 240px;
+            background: linear-gradient(135deg, var(--charcoal-light) 0%, var(--charcoal) 100%);
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--gold-light);
+            font-family: 'Playfair Display', serif;
+            text-align: center;
+            padding: 1rem;
+        }
+        .project-tag {
+            position: absolute;
+            top: 1.5rem;
+            left: 1.5rem;
+            background: var(--gold);
+            color: var(--white);
+            padding: 0.4rem 1rem;
+            border-radius: 100px;
+            font-size: 0.75rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+        .project-info {
+            padding: 2rem;
+        }
+        .project-info h3 {
+            font-size: 1.25rem;
+            margin-bottom: 0.5rem;
+            color: var(--charcoal);
+        }
+        .project-info p {
+            color: var(--gray);
+            font-size: 0.9rem;
+            line-height: 1.6;
+        }
+        .project-meta {
+            display: flex;
+            gap: 1.5rem;
+            margin-top: 1.5rem;
+            padding-top: 1.5rem;
+            border-top: 1px solid var(--light-gray);
+        }
+        .project-meta span {
+            font-size: 0.85rem;
+            color: var(--gray);
+            display: flex;
+            align-items: center;
+            gap: 0.4rem;
+        }
+
+        /* Partnerships */
+        .partnerships {
+            background: var(--white);
+        }
+        .partnerships-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+        .partnership-block {
+            padding: 2.5rem;
+            border-radius: 12px;
+            background: var(--light-gray);
+            border: 1px solid rgba(0,0,0,0.04);
+            transition: var(--transition);
+        }
+        .partnership-block:hover {
+            background: var(--white);
+            box-shadow: 0 10px 40px rgba(0,0,0,0.06);
+        }
+        .partnership-block h3 {
+            color: var(--charcoal);
+            font-size: 1.2rem;
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+        }
+        .partnership-block h3 span {
+            font-size: 1.5rem;
+        }
+        .partnership-block ul {
+            list-style: none;
+        }
+        .partnership-block ul li {
+            padding: 0.5rem 0;
+            color: var(--gray);
+            font-size: 0.9rem;
+            display: flex;
+            align-items: flex-start;
+            gap: 0.5rem;
+        }
+        .partnership-block ul li::before {
+            content: '›';
+            color: var(--gold-dark);
+            font-weight: 700;
+            font-size: 1.2rem;
+            line-height: 1;
+        }
+
+        /* Global / REIT */
+        .global-section {
+            background: linear-gradient(135deg, #1a1a2e 0%, var(--charcoal) 100%);
+            color: var(--white);
+            position: relative;
+            overflow: hidden;
+        }
+        .global-section::before {
+            content: '';
+            position: absolute;
+            bottom: -30%;
+            left: -10%;
+            width: 600px;
+            height: 600px;
+            background: radial-gradient(circle, rgba(212, 175, 55, 0.12) 0%, transparent 70%);
+            border-radius: 50%;
+        }
+        .global-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+            position: relative;
+            z-index: 2;
+        }
+        .global-content h2 {
+            font-size: 2.5rem;
+            margin-bottom: 1.5rem;
+            color: var(--white);
+        }
+        .global-content h2 em {
+            color: var(--gold);
+            font-style: italic;
+        }
+        .global-content p {
+            color: rgba(255, 255, 255, 0.65);
+            margin-bottom: 1.5rem;
+            line-height: 1.8;
+        }
+        .global-features {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+        .global-feature {
+            display: flex;
+            gap: 1rem;
+            align-items: flex-start;
+        }
+        .global-feature-icon {
+            width: 40px;
+            height: 40px;
+            background: rgba(212, 175, 55, 0.15);
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--gold);
+            font-size: 1.2rem;
+            flex-shrink: 0;
+        }
+        .global-feature h4 {
+            color: var(--white);
+            font-size: 1rem;
+            margin-bottom: 0.25rem;
+            font-family: 'Inter', sans-serif;
+            font-weight: 600;
+        }
+        .global-feature span {
+            color: rgba(255, 255, 255, 0.5);
+            font-size: 0.85rem;
+        }
+        .global-visual {
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            border-radius: 16px;
+            padding: 3rem;
+            text-align: center;
+        }
+        .global-visual h3 {
+            color: var(--gold);
+            font-family: 'Playfair Display', serif;
+            font-size: 1.8rem;
+            margin-bottom: 1rem;
+        }
+        .global-visual p {
+            color: rgba(255, 255, 255, 0.5);
+            font-size: 0.9rem;
+        }
+        .reit-badge {
+            display: inline-block;
+            margin-top: 2rem;
+            padding: 1rem 2rem;
+            background: rgba(212, 175, 55, 0.1);
+            border: 1px solid rgba(212, 175, 55, 0.3);
+            border-radius: 8px;
+            color: var(--gold);
+            font-weight: 600;
+            font-size: 0.9rem;
+        }
+
+        /* Leadership */
+        .leadership {
+            background: var(--light-gray);
+        }
+        .leadership-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 2rem;
+        }
+        .leader-card {
+            background: var(--white);
+            border-radius: 12px;
+            overflow: hidden;
+            text-align: center;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+            transition: var(--transition);
+        }
+        .leader-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 40px rgba(0,0,0,0.1);
+        }
+        .leader-photo {
+            height: 200px;
+            background: linear-gradient(135deg, var(--charcoal-light) 0%, var(--charcoal) 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--gold);
+            font-size: 3rem;
+            font-family: 'Playfair Display', serif;
+        }
+        .leader-info {
+            padding: 1.5rem;
+        }
+        .leader-info h4 {
+            font-size: 1.1rem;
+            color: var(--charcoal);
+            margin-bottom: 0.25rem;
+        }
+        .leader-info span {
+            display: block;
+            color: var(--gold-dark);
+            font-size: 0.85rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+        .leader-info p {
+            color: var(--gray);
+            font-size: 0.8rem;
+        }
+
+        /* Contact */
+        .contact {
+            background: var(--white);
+        }
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+        }
+        .contact-info h3 {
+            font-size: 1.8rem;
+            margin-bottom: 1.5rem;
+            color: var(--charcoal);
+        }
+        .contact-info > p {
+            color: var(--gray);
+            margin-bottom: 2rem;
+            line-height: 1.7;
+        }
+        .contact-details {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+        }
+        .contact-item {
+            display: flex;
+            gap: 1rem;
+            align-items: flex-start;
+        }
+        .contact-item-icon {
+            width: 45px;
+            height: 45px;
+            background: var(--gold-light);
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--gold-dark);
+            font-size: 1.2rem;
+            flex-shrink: 0;
+        }
+        .contact-item h4 {
+            font-family: 'Inter', sans-serif;
+            font-size: 1rem;
+            font-weight: 600;
+            color: var(--charcoal);
+            margin-bottom: 0.25rem;
+        }
+        .contact-item p, .contact-item a {
+            color: var(--gray);
+            font-size: 0.9rem;
+            text-decoration: none;
+            line-height: 1.5;
+            transition: var(--transition);
+        }
+        .contact-item a:hover {
+            color: var(--gold-dark);
+        }
+        .contact-form {
+            background: var(--light-gray);
+            padding: 3rem;
+            border-radius: 12px;
+        }
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+        .form-group label {
+            display: block;
+            font-size: 0.85rem;
+            font-weight: 600;
+            color: var(--charcoal);
+            margin-bottom: 0.5rem;
+        }
+        .form-group input,
+        .form-group textarea,
+        .form-group select {
+            width: 100%;
+            padding: 0.875rem 1rem;
+            border: 1px solid rgba(0,0,0,0.1);
+            border-radius: 8px;
+            font-family: 'Inter', sans-serif;
+            font-size: 0.95rem;
+            transition: var(--transition);
+            background: var(--white);
+        }
+        .form-group input:focus,
+        .form-group textarea:focus,
+        .form-group select:focus {
+            outline: none;
+            border-color: var(--gold);
+            box-shadow: 0 0 0 3px rgba(212, 175, 55, 0.1);
+        }
+        .form-group textarea {
+            resize: vertical;
+            min-height: 120px;
+        }
+
+        /* Footer */
+        footer {
+            background: var(--charcoal);
+            color: rgba(255, 255, 255, 0.6);
+            padding: 4rem 0 2rem;
+        }
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1fr;
+            gap: 3rem;
+            margin-bottom: 3rem;
+        }
+        .footer-brand .logo-text span:first-child {
+            color: var(--white);
+        }
+        .footer-brand p {
+            margin-top: 1rem;
+            font-size: 0.9rem;
+            line-height: 1.7;
+            max-width: 300px;
+        }
+        .footer-links h4 {
+            color: var(--white);
+            font-family: 'Inter', sans-serif;
+            font-size: 0.9rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            margin-bottom: 1.5rem;
+        }
+        .footer-links ul {
+            list-style: none;
+        }
+        .footer-links li {
+            margin-bottom: 0.75rem;
+        }
+        .footer-links a {
+            color: rgba(255, 255, 255, 0.5);
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: var(--transition);
+        }
+        .footer-links a:hover {
+            color: var(--gold);
+        }
+        .footer-bottom {
+            border-top: 1px solid rgba(255, 255, 255, 0.08);
+            padding-top: 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 1rem;
+            font-size: 0.85rem;
+        }
+        .footer-bottom span {
+            color: rgba(255, 255, 255, 0.3);
+        }
+
+        /* Animations */
+        .reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.8s ease-out;
+        }
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Responsive */
+        @media (max-width: 968px) {
+            .nav-links {
+                display: none;
+            }
+            .mobile-menu-btn {
+                display: block;
+            }
+            .hero-pillars {
+                display: none;
+            }
+            .about-grid,
+            .global-grid,
+            .contact-grid {
+                grid-template-columns: 1fr;
+            }
+            .about-image-badge {
+                right: 1rem;
+                bottom: 1rem;
+            }
+            .footer-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+            .global-features {
+                grid-template-columns: 1fr;
+            }
+        }
+        @media (max-width: 640px) {
+            .services-grid,
+            .projects-grid {
+                grid-template-columns: 1fr;
+            }
+            .footer-grid {
+                grid-template-columns: 1fr;
+            }
+            .about-stats {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+            .contact-form {
+                padding: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navigation -->
+    <nav id="navbar">
+        <div class="nav-container">
+            <a href="#" class="logo">
+                <div class="logo-icon">AP</div>
+                <div class="logo-text">
+                    <span>Asia Pacific Golden Dragon</span>
+                    <span>Realty & Development Corp.</span>
+                </div>
+            </a>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#about">About</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#development">Development</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#partnerships">Partnerships</a></li>
+                <li><a href="#global">Global</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <button class="mobile-menu-btn" id="mobileMenuBtn">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-accent"></div>
+        <div class="hero-content">
+            <div class="hero-label">Subic Bay Freeport Zone · Philippines</div>
+            <h1>Building <em>Sustainable Communities</em> Across the Asia-Pacific</h1>
+            <p>An integrated real estate development, investment, and asset management company headquartered in the Subic Bay Freeport Zone, transforming landscapes through eco-tourism, smart cities, and economic zones.</p>
+            <div class="hero-buttons">
+                <a href="#projects" class="btn btn-primary">Explore Projects</a>
+                <a href="#partnerships" class="btn btn-outline">Partner With Us</a>
+            </div>
+        </div>
+        <div class="hero-pillars">
+            <div class="pillar">Acquisition</div>
+            <div class="pillar">Development</div>
+            <div class="pillar">Management</div>
+            <div class="pillar">Leasing</div>
+            <div class="pillar">Sales</div>
+            <div class="pillar">Investment</div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <div class="about-grid reveal">
+                <div class="about-image">
+                    <div class="about-image-placeholder">
+                        SBMA Corporate Centre
+                        <div class="about-image-badge">
+                            <div class="number">₱100M</div>
+                            <div class="label">Authorized Capital</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-content">
+                    <div class="section-label">About Us</div>
+                    <h3>Integrated Real Estate Excellence from Subic Bay to the World</h3>
+                    <p>Asia Pacific Golden Dragon Realty and Development Corporation is a Philippine stock corporation registered with the Securities and Exchange Commission, strategically headquartered at the Subic Bay Freeport Zone (SBMA) in Olongapo City, Zambales.</p>
+                    <p>From our roots in property acquisition, we have evolved into a full-spectrum real estate enterprise with authorized capital of One Hundred Million Pesos (₱100,000,000.00). Our operations span property development, management, leasing, sales, and capital formation — serving local communities, government agencies, foreign investors, and institutional partners.</p>
+                    <p>We are committed to sustainable urbanization, affordable housing under the 4PH program, PEZA-registered economic zones, and the future establishment of a Real Estate Investment Trust (REIT).</p>
+                    <div class="about-stats">
+                        <div class="stat">
+                            <h4>5</h4>
+                            <span>Board Directors</span>
+                        </div>
+                        <div class="stat">
+                            <h4>25%</h4>
+                            <span>Paid-Up Capital</span>
+                        </div>
+                        <div class="stat">
+                            <h4>∞</h4>
+                            <span>Perpetual Existence</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="services">
+        <div class="container">
+            <div class="section-header reveal">
+                <div class="section-label">Core Services</div>
+                <h2>End-to-End Real Estate Solutions</h2>
+                <p>Our corporate purposes under the Amended Articles of Incorporation authorize a comprehensive range of real estate and financial services.</p>
+            </div>
+            <div class="services-grid">
+                <div class="service-card reveal">
+                    <div class="service-icon">🏞️</div>
+                    <h3>Property Acquisition & Land Banking</h3>
+                    <p>Strategic aggregation of real property assets for development, investment, and long-term appreciation.</p>
+                    <ul class="service-list">
+                        <li>Land, buildings, and subdivision lots</li>
+                        <li>Condominium units and townhouses</li>
+                        <li>Resort and leisure properties</li>
+                        <li>Industrial estates and eco-zones</li>
+                        <li>PEZA and TEZA zone properties</li>
+                        <li>Title due diligence and regulatory compliance</li>
+                    </ul>
+                </div>
+                <div class="service-card reveal">
+                    <div class="service-icon">🏗️</div>
+                    <h3>Property Development</h3>
+                    <p>Master-planned development across residential, commercial, industrial, and tourism asset classes.</p>
+                    <ul class="service-list">
+                        <li>Eco-tourism resorts and wellness communities</li>
+                        <li>PEZA-registered estates and buildings</li>
+                        <li>Industrial estates and logistics parks</li>
+                        <li>Smart cities and sustainable communities</li>
+                        <li>4PH government housing projects</li>
+                        <li>Affordable, socialized, and medium-rise housing</li>
+                        <li>Mixed-use horizontal and vertical developments</li>
+                    </ul>
+                </div>
+                <div class="service-card reveal">
+                    <div class="service-icon">🏬</div>
+                    <h3>Property Management</h3>
+                    <p>Professional administration of owned, leased, and third-party properties under management contracts.</p>
+                    <ul class="service-list">
+                        <li>Condominium corporation management</li>
+                        <li>Homeowners association (HOA) administration</li>
+                        <li>Commercial building operations</li>
+                        <li>Government-owned property management</li>
+                        <li>Foreign investor real estate asset oversight</li>
+                        <li>Facilities maintenance and tenant relations</li>
+                    </ul>
+                </div>
+                <div class="service-card reveal">
+                    <div class="service-icon">🔑</div>
+                    <h3>Leasing & Asset Optimization</h3>
+                    <p>Maximizing returns through residential, commercial, industrial, and tourism property leasing.</p>
+                    <ul class="service-list">
+                        <li>Residential leasing (short & long-term)</li>
+                        <li>Commercial retail and office spaces</li>
+                        <li>Industrial and warehouse facilities</li>
+                        <li>Tourism and hospitality licensing</li>
+                        <li>Sublease and license arrangements</li>
+                        <li>Lease administration and renewal programs</li>
+                    </ul>
+                </div>
+                <div class="service-card reveal">
+                    <div class="service-icon">🤝</div>
+                    <h3>Sales, Marketing & Brokerage</h3>
+                    <p>End-to-end transaction services for primary sales, secondary markets, and cross-border investors.</p>
+                    <ul class="service-list">
+                        <li>Developer project sales and marketing</li>
+                        <li>Real estate brokerage and exchange</li>
+                        <li>Investment advisory and portfolio divestment</li>
+                        <li>Cross-border sales for foreign investors</li>
+                        <li>Brand strategy and market positioning</li>
+                    </ul>
+                </div>
+                <div class="service-card reveal">
+                    <div class="service-icon">💰</div>
+                    <h3>Capital Formation & Fund Raising</h3>
+                    <p>Corporate finance solutions to fund growth through debt instruments and structured finance.</p>
+                    <ul class="service-list">
+                        <li>Corporate loans and credit facilities</li>
+                        <li>Bonds, debentures, and commercial paper</li>
+                        <li>Local and foreign capital market access</li>
+                        <li>Asset-backed securities and hypothecation</li>
+                        <li>Private lender and institutional placements</li>
+                        <li>Mortgage, pledge, and trust arrangements</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Development Pillars -->
+    <section id="development" class="pillars-section">
+        <div class="container">
+            <div class="section-header reveal">
+                <div class="section-label">Development Pillars</div>
+                <h2>Strategic Specializations</h2>
+                <p>Granular development verticals authorized under our corporate charter and aligned with national development priorities.</p>
+            </div>
+            <div class="pillars-grid">
+                <div class="pillar-card reveal">
+                    <div class="number">01</div>
+                    <h3>Eco-Tourism & Wellness</h3>
+                    <p>Resort developments and health-focused communities that preserve natural capital while delivering premium hospitality experiences.</p>
+                </div>
+                <div class="pillar-card reveal">
+                    <div class="number">02</div>
+                    <h3>Economic Zones</h3>
+                    <p>PEZA and TEZA-registered estates, buildings, and industrial parks designed for export-oriented manufacturing and BPO operations.</p>
+                </div>
+                <div class="pillar-card reveal">
+                    <div class="number">03</div>
+                    <h3>Industrial & Logistics</h3>
+                    <p>Modern logistics parks and industrial estates supporting supply chain resilience and last-mile distribution networks.</p>
+                </div>
+                <div class="pillar-card reveal">
+                    <div class="number">04</div>
+                    <h3>Affordable Housing (4PH)</h3>
+                    <p>Participation in the Pambansang Pabahay para sa Pilipino program, delivering socialized, affordable, and medium-rise housing.</p>
+                </div>
+                <div class="pillar-card reveal">
+                    <div class="number">05</div>
+                    <h3>Smart & Sustainable Cities</h3>
+                    <p>Mixed-use master-planned communities integrating green building standards, digital infrastructure, and sustainable mobility.</p>
+                </div>
+                <div class="pillar-card reveal">
+                    <div class="number">06</div>
+                    <h3>Government Infrastructure</h3>
+                    <p>Joint ventures and consortium partnerships with LGUs and national agencies for public real estate and infrastructure.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects -->
+    <section id="projects" class="projects">
+        <div class="container">
+            <div class="section-header reveal">
+                <div class="section-label">Portfolio</div>
+                <h2>Featured Developments</h2>
+                <p>Current and pipeline projects reflecting our integrated development strategy across the Philippines.</p>
+            </div>
+            <div class="projects-filter reveal">
+                <button class="filter-btn active">All</button>
+                <button class="filter-btn">Residential</button>
+                <button class="filter-btn">Industrial</button>
+                <button class="filter-btn">Tourism</button>
+                <button class="filter-btn">Economic Zone</button>
+            </div>
+            <div class="projects-grid">
+                <div class="project-card reveal">
+                    <div class="project-image">
+                        <div class="project-tag">Economic Zone</div>
+                        SBMA Logistics Park
+                    </div>
+                    <div class="project-info">
+                        <h3>Golden Dragon Industrial Estate</h3>
+                        <p>A PEZA-registered logistics and light manufacturing park within the Subic Bay Freeport Zone, offering warehouse facilities and factory shells for export-oriented enterprises.</p>
+                        <div class="project-meta">
+                            <span>📍 SBMA, Zambales</span>
+                            <span>🏗️ Development</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card reveal">
+                    <div class="project-image">
+                        <div class="project-tag">Residential</div>
+                        4PH Housing
+                    </div>
+                    <div class="project-info">
+                        <h3>Carael Sustainable Communities</h3>
+                        <p>Affordable and socialized housing development in Botolan, Zambales under the Pambansang Pabahay para sa Pilipino program, featuring medium-rise buildings and community amenities.</p>
+                        <div class="project-meta">
+                            <span>📍 Botolan, Zambales</span>
+                            <span>🏗️ Pre-Development</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card reveal">
+                    <div class="project-image">
+                        <div class="project-tag">Tourism</div>
+                        Wellness Resort
+                    </div>
+                    <div class="project-info">
+                        <h3>Zambales Eco-Wellness Resort</h3>
+                        <p>An integrated eco-tourism and wellness resort combining sustainable hospitality, health-focused amenities, and nature preservation along the Zambales coastline.</p>
+                        <div class="project-meta">
+                            <span>📍 Zambales Coast</span>
+                            <span>🏗️ Planning</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card reveal">
+                    <div class="project-image">
+                        <div class="project-tag">Mixed-Use</div>
+                        Smart City
+                    </div>
+                    <div class="project-info">
+                        <h3>Subic Smart City District</h3>
+                        <p>A sustainable mixed-use development integrating residential towers, commercial centers, and digital infrastructure within a master-planned smart city framework.</p>
+                        <div class="project-meta">
+                            <span>📍 Olongapo City</span>
+                            <span>🏗️ Master Planning</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card reveal">
+                    <div class="project-image">
+                        <div class="project-tag">Management</div>
+                        Commercial
+                    </div>
+                    <div class="project-info">
+                        <h3>SIH Complex Corporate Centre</h3>
+                        <p>Flagship commercial property management contract at our principal office location, serving corporate tenants and government leaseholders in the Freeport Zone.</p>
+                        <div class="project-meta">
+                            <span>📍 Canal Road, SBMA</span>
+                            <span>✅ Operational</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card reveal">
+                    <div class="project-image">
+                        <div class="project-tag">Industrial</div>
+                        TEZA Zone
+                    </div>
+                    <div class="project-info">
+                        <h3>Asia Pacific Logistics Hub</h3>
+                        <p>A dedicated logistics park and industrial estate supporting regional trade, cold storage, and distribution networks for domestic and international tenants.</p>
+                        <div class="project-meta">
+                            <span>📍 Central Luzon</span>
+                            <span>🏗️ Land Banking</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Partnerships -->
+    <section id="partnerships" class="partnerships">
+        <div class="container">
+            <div class="section-header reveal">
+                <div class="section-label">Partnerships & Investment</div>
+                <h2>Collaborative Growth & Capital Opportunities</h2>
+                <p>Our corporate charter authorizes broad partnership and investment activities to accelerate large-scale development.</p>
+            </div>
+            <div class="partnerships-grid">
+                <div class="partnership-block reveal">
+                    <h3><span>🤝</span> Joint Ventures & Consortiums</h3>
+                    <ul>
+                        <li>Strategic alliances with local and international developers</li>
+                        <li>Partnerships with LGUs and government agencies</li>
+                        <li>Foreign funding group collaborations</li>
+                        <li>International organization project partnerships</li>
+                        <li>Consortium bidding for infrastructure projects</li>
+                        <li>Public-private partnership (PPP) structures</li>
+                    </ul>
+                </div>
+                <div class="partnership-block reveal">
+                    <h3><span>🏛️</span> Government Collaboration</h3>
+                    <ul>
+                        <li>4PH (Pambansang Pabahay) program participation</li>
+                        <li>LGU joint ventures for urban renewal</li>
+                        <li>Government property management contracts</li>
+                        <li>National agency infrastructure partnerships</li>
+                        <li>PEZA zone development accreditation</li>
+                        <li>Socialized housing compliance and delivery</li>
+                    </ul>
+                </div>
+                <div class="partnership-block reveal">
+                    <h3><span>💹</span> Investment Vehicles</h3>
+                    <ul>
+                        <li>Domestic and overseas subsidiary formation</li>
+                        <li>Special Purpose Company (SPV) creation</li>
+                        <li>Real Estate Investment Trust (REIT) preparation</li>
+                        <li>Affiliate company equity participation</li>
+                        <li>Branch and representative office establishment</li>
+                        <li>Cross-border capital structuring</li>
+                    </ul>
+                </div>
+                <div class="partnership-block reveal">
+                    <h3><span>🌏</span> Foreign Investor Services</h3>
+                    <ul>
+                        <li>Real estate asset management for foreign principals</li>
+                        <li>Cross-border sales and marketing</li>
+                        <li>Regulatory compliance and SEC facilitation</li>
+                        <li>Lease structuring for international tenants</li>
+                        <li>Investment advisory and market entry strategy</li>
+                        <li>Representative office support services</li>
+                    </ul>
+                </div>
+                <div class="partnership-block reveal">
+                    <h3><span>📈</span> Capital & Fund Raising</h3>
+                    <ul>
+                        <li>Corporate bond and debenture issuance</li>
+                        <li>Commercial paper programs</li>
+                        <li>Local and foreign institutional loans</li>
+                        <li>Private placement memorandums</li>
+                        <li>Asset-backed securities and collateralization</li>
+                        <li>Mortgage, pledge, and trust arrangements</li>
+                    </ul>
+                </div>
+                <div class="partnership-block reveal">
+                    <h3><span>🏢</span> REIT Readiness</h3>
+                    <ul>
+                        <li>Income-generating asset aggregation</li>
+                        <li>RA 9856 (REIT Act) compliance preparation</li>
+                        <li>Asset transfer to REIT structures</li>
+                        <li>Independent property valuation coordination</li>
+                        <li>Prospectus and disclosure preparation</li>
+                        <li>SEC and PSE listing advisory support</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Global / REIT -->
+    <section id="global" class="global-section">
+        <div class="container">
+            <div class="global-grid reveal">
+                <div class="global-content">
+                    <div class="section-label">Global Expansion</div>
+                    <h2>From <em>Subic Bay</em> to the World</h2>
+                    <p>Our Amended Articles authorize the establishment of subsidiaries, branches, representative offices, and liaison offices both domestically and internationally — positioning Asia Pacific Golden Dragon as a truly regional real estate platform.</p>
+                    <p>We are actively preparing for REIT qualification under Republic Act No. 9856, creating a pathway for public market access and democratized real estate investment.</p>
+                    <div class="global-features">
+                        <div class="global-feature">
+                            <div class="global-feature-icon">🏢</div>
+                            <div>
+                                <h4>Domestic Network</h4>
+                                <span>Branches across key Philippine growth corridors</span>
+                            </div>
+                        </div>
+                        <div class="global-feature">
+                            <div class="global-feature-icon">🌐</div>
+                            <div>
+                                <h4>International Presence</h4>
+                                <span>Representative and liaison offices abroad</span>
+                            </div>
+                        </div>
+                        <div class="global-feature">
+                            <div class="global-feature-icon">📊</div>
+                            <div>
+                                <h4>REIT Pipeline</h4>
+                                <span>Income-generating assets prepared for transfer</span>
+                            </div>
+                        </div>
+                        <div class="global-feature">
+                            <div class="global-feature-icon">🔗</div>
+                            <div>
+                                <h4>SPV Structure</h4>
+                                <span>Special purpose vehicles for risk isolation</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="global-visual">
+                    <h3>REIT-Ready Platform</h3>
+                    <p>Preparing for qualification and operation as a Real Estate Investment Trust under Philippine law, unlocking institutional and retail capital for prime income-generating assets.</p>
+                    <div class="reit-badge">RA 9856 Compliant Structure</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Leadership -->
+    <section class="leadership">
+        <div class="container">
+            <div class="section-header reveal">
+                <div class="section-label">Corporate Governance</div>
+                <h2>Board & Officers</h2>
+                <p>Leadership team guiding the corporation under the Revised Corporation Code of the Philippines (RA 11232).</p>
+            </div>
+            <div class="leadership-grid">
+                <div class="leader-card reveal">
+                    <div class="leader-photo">CM</div>
+                    <div class="leader-info">
+                        <h4>Clarence Mercillo Morales</h4>
+                        <span>Chairman, President & CEO</span>
+                        <p>60% equity holder. Lead strategist and executive officer.</p>
+                    </div>
+                </div>
+                <div class="leader-card reveal">
+                    <div class="leader-photo">BG</div>
+                    <div class="leader-info">
+                        <h4>Bryan Olano Gamboa</h4>
+                        <span>Corporate Secretary</span>
+                        <p>20% equity holder. Governance, compliance, and records.</p>
+                    </div>
+                </div>
+                <div class="leader-card reveal">
+                    <div class="leader-photo">IO</div>
+                    <div class="leader-info">
+                        <h4>Imee Espinosa Olivar</h4>
+                        <span>Treasurer</span>
+                        <p>10% equity holder. Finance, capital, and treasury operations.</p>
+                    </div>
+                </div>
+                <div class="leader-card reveal">
+                    <div class="leader-photo">QV</div>
+                    <div class="leader-info">
+                        <h4>Queen Vivian Bilan Gamboa</h4>
+                        <span>Director</span>
+                        <p>5% equity holder. Board oversight and strategic planning.</p>
+                    </div>
+                </div>
+                <div class="leader-card reveal">
+                    <div class="leader-photo">GT</div>
+                    <div class="leader-info">
+                        <h4>Golden Tri-Quad Dragon Corp.</h4>
+                        <span>Corporate Director</span>
+                        <p>5% equity holder. Institutional representation.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <div class="contact-grid reveal">
+                <div class="contact-info">
+                    <div class="section-label">Contact</div>
+                    <h3>Let's Build Something Exceptional</h3>
+                    <p>Whether you are seeking development partnership, property management services, investment opportunities, or joint venture collaboration, our team is ready to engage.</p>
+                   
+                    <div class="contact-details">
+                        <div class="contact-item">
+                            <div class="contact-item-icon">🏢</div>
+                            <div>
+                                <h4>Principal Office</h4>
+                                <p>237 SIH Complex, Canal Road<br>Subic Bay Freeport Zone (SBMA)<br>Olongapo City, Zambales, Philippines</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-item-icon">📍</div>
+                            <div>
+                                <h4>Satellite Office</h4>
+                                <p>Purok 2, Carael<br>Botolan, Zambales, Philippines</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-item-icon">📧</div>
+                            <div>
+                                <h4>Email</h4>
+                                <a href="mailto:goldendragongroupph@gmail.com">goldendragongroupph@gmail.com</a>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-item-icon">📞</div>
+                            <div>
+                                <h4>Telephone</h4>
+                                <a href="tel:+639199700552">0919 970 0552</a><br>
+                                <a href="tel:+63285109925">02-8510-9925</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="contact-form reveal">
+                    <form onsubmit="event.preventDefault(); alert('Thank you for your inquiry. Our team will contact you shortly.');">
+                        <div class="form-group">
+                            <label>Full Name</label>
+                            <input type="text" placeholder="Your name" required>
+                        </div>
+                        <div class="form-group">
+                            <label>Email Address</label>
+                            <input type="email" placeholder="your@email.com" required>
+                        </div>
+                        <div class="form-group">
+                            <label>Inquiry Type</label>
+                            <select required>
+                                <option value="">Select an option</option>
+                                <option>Property Acquisition</option>
+                                <option>Development Partnership</option>
+                                <option>Joint Venture Proposal</option>
+                                <option>Property Management</option>
+                                <option>Leasing Inquiry</option>
+                                <option>Investment / REIT</option>
+                                <option>General Inquiry</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label>Message</label>
+                            <textarea placeholder="Tell us about your project or inquiry..." required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary" style="width: 100%; justify-content: center;">Send Inquiry</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="#" class="logo">
+                        <div class="logo-icon">AP</div>
+                        <div class="logo-text">
+                            <span>Asia Pacific Golden Dragon</span>
+                            <span>Realty & Development Corp.</span>
+                        </div>
+                    </a>
+                    <p>A Philippine stock corporation engaged in integrated real estate acquisition, development, management, leasing, sales, and investment across the Asia-Pacific region.</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="#about">About Us</a></li>
+                        <li><a href="#services">Services</a></li>
+                        <li><a href="#projects">Projects</a></li>
+                        <li><a href="#partnerships">Partnerships</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Investors</h4>
+                    <ul>
+                        <li><a href="#global">REIT Preparation</a></li>
+                        <li><a href="#partnerships">Capital Formation</a></li>
+                        <li><a href="#global">Global Expansion</a></li>
+                        <li><a href="#contact">Contact IR</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Legal</h4>
+                    <ul>
+                        <li><a href="#">Corporate Governance</a></li>
+                        <li><a href="#">SEC Filings</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms of Use</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <span>© 2026 Asia Pacific Golden Dragon Realty and Development Corporation. All rights reserved.</span>
+                <span>SEC Reg. No. 2020214-PM-0004875-14</span>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Navbar scroll effect
+        const navbar = document.getElementById('navbar');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
+
+        // Mobile menu toggle
+        const mobileBtn = document.getElementById('mobileMenuBtn');
+        const navLinks = document.getElementById('navLinks');
+
+        mobileBtn.addEventListener('click', () => {
+            if (navLinks.style.display === 'flex') {
+                navLinks.style.display = 'none';
+            } else {
+                navLinks.style.display = 'flex';
+                navLinks.style.flexDirection = 'column';
+                navLinks.style.position = 'absolute';
+                navLinks.style.top = '100%';
+                navLinks.style.left = '0';
+                navLinks.style.right = '0';
+                navLinks.style.background = 'white';
+                navLinks.style.padding = '2rem';
+                navLinks.style.boxShadow = '0 10px 30px rgba(0,0,0,0.1)';
+            }
+        });
+
+        // Intersection Observer for reveal animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('active');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+        // Filter buttons interaction
+        document.querySelectorAll('.filter-btn').forEach(btn => {
+            btn.addEventListener('click', function() {
+                document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+                this.classList.add('active');
+            });
+        });
+    </script>
+</body>
+</html>
